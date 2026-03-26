@@ -29,7 +29,7 @@
       },
       "rating": { "average": 4.8, "reviewsCount": 12 }
     },
-    "image": "assets/img/shop_01.jpg"
+    "image": "assets/img/beigeblouse.jpg"
   },
   {
     "id": 2,
@@ -57,7 +57,7 @@
       },
       "rating": { "average": 4.5, "reviewsCount": 8 }
     },
-    "image": "assets/img/shop_02.jpg"
+    "image": "assets/img/blackblouse.jpg"
   },
   {
     "id": 3,
@@ -87,7 +87,7 @@
       },
       "rating": { "average": 4.9, "reviewsCount": 16 }
     },
-    "image": "assets/img/shop_03.jpg"
+    "image": "assets/img/bluepants.jpg"
   },
   {
     "id": 4,
@@ -119,7 +119,7 @@
       },
       "rating": { "average": 4.3, "reviewsCount": 5 }
     },
-    "image": "assets/img/shop_04.jpg"
+    "image": "assets/img/brownblouse.jpg"
   },
   {
     "id": 5,
@@ -150,7 +150,7 @@
       },
       "rating": { "average": 4.6, "reviewsCount": 9 }
     },
-    "image": "assets/img/shop_05.jpg"
+    "image": "assets/img/brownpants.jpg"
   },
   {
     "id": 6,
@@ -177,7 +177,7 @@
       },
       "rating": { "average": 4.1, "reviewsCount": 3 }
     },
-    "image": "assets/img/shop_06.jpg"
+    "image": "assets/img/cutewhitedress.jpg"
   },
   {
     "id": 7,
@@ -209,7 +209,7 @@
       },
       "rating": { "average": 4.7, "reviewsCount": 10 }
     },
-    "image": "assets/img/shop_07.jpg"
+    "image": "assets/img/greenblouse.jpg"
   },
   {
     "id": 8,
@@ -240,7 +240,7 @@
       },
       "rating": { "average": 4.4, "reviewsCount": 7 }
     },
-    "image": "assets/img/shop_08.jpg"
+    "image": "assets/img/greypants.jpg"
   },
   {
     "id": 9,
@@ -267,7 +267,7 @@
       },
       "rating": { "average": 4.2, "reviewsCount": 6 }
     },
-    "image": "assets/img/shop_09.jpg"
+    "image": "assets/img/longblouse.jpg"
   },
   {
     "id": 10,
@@ -298,7 +298,7 @@
       },
       "rating": { "average": 4.5, "reviewsCount": 6 }
     },
-    "image": "assets/img/shop_01.jpg"
+    "image": "assets/img/stripedpants.jpg"
   },
   {
     "id": 11,
@@ -329,7 +329,7 @@
       },
       "rating": { "average": 4.6, "reviewsCount": 11 }
     },
-    "image": "assets/img/shop_02.jpg"
+    "image": "assets/img/whitedress.jpg"
   },
   {
     "id": 12,
@@ -357,6 +357,6 @@
       },
       "rating": { "average": 4.8, "reviewsCount": 14 }
     },
-    "image": "assets/img/shop_03.jpg"
+    "image": "assets/img/yellowdress.jpg"
   }
 ]

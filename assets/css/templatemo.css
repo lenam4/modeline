@@ -232,3 +232,14 @@ body, ul, li, p, a, label, input, div {
     object-fit: cover;
 }
 
+#shop .card-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+#featuredProducts .card-img-top {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
