@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Modeline | Contact</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Contact Modeline for inquiries and support.">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+
+    <!-- MAP -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+
+<body>
+
+<!-- HEADER (IDENTIČAN) -->
+<nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
+                Modeline
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#main_nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between align-items-center" id="main_nav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Shop</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="author.html">Author</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="documentation.html">Documentation</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center">
+                    <a class="nav-icon position-relative text-decoration-none text-dark" href="cart.html">
+                        <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success text-white">0</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+
+<!-- CONTACT SECTION -->
+<section class="container py-5">
+    <div class="row">
+
+        <!-- FORM -->
+        <div class="col-md-6">
+            <h2 class="mb-4">Contact Us</h2>
+
+            <form id="contactForm">
+
+                <div class="mb-3">
+                    <label>Full Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Your name">
+                </div>
+
+                <div class="mb-3">
+                    <label>Email</label>
+                    <input type="text" class="form-control" id="email" placeholder="Your email">
+                </div>
+
+                <div class="mb-3">
+                    <label>Message</label>
+                    <textarea class="form-control" id="message" rows="5"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-success">Send Message</button>
+
+                <p id="formMsg" class="mt-3"></p>
+            </form>
+        </div>
+
+        <!-- MAP -->
+        <div class="col-md-6">
+            <h2 class="mb-4">Our Location</h2>
+            <div id="mapid" style="width:100%; height:350px;"></div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- FOOTER (ISTI KAO INDEX) -->
+<footer class="bg-dark" id="templatemo_footer">
+    <div class="container">
+        <div class="row">
+
+            <!-- BRAND -->
+            <div class="col-md-4 pt-5">
+                <h2 class="h2 text-success border-bottom pb-3 border-light logo">Modeline</h2>
+                <ul class="list-unstyled text-light footer-link-list">
+                    <li>Belgrade, Serbia</li>
+                    <li>+381 60 000 000</li>
+                    <li>info@modeline.com</li>
+                </ul>
+            </div>
+
+            <!-- NAV -->
+            <div class="col-md-4 pt-5">
+                <h2 class="h2 text-light border-bottom pb-3 border-light">Navigation</h2>
+                <ul class="list-unstyled footer-link-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="author.html">Author</a></li>
+                    <li><a href="documentation.html">Documentation</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </div>
+
+            <!-- ABOUT -->
+            <div class="col-md-4 pt-5">
+                <h2 class="h2 text-light border-bottom pb-3 border-light">About</h2>
+                <p class="text-light">
+                    Modern fashion pieces designed for confident and effortless style.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- ICONS + SUBSCRIBE -->
+        <div class="row text-light mb-4 mt-4">
+            <div class="col-12 mb-3">
+                <div class="w-100 border-top border-light"></div>
+            </div>
+
+            <!-- SOCIAL ICONS -->
+            <div class="col-auto me-auto">
+                <ul class="list-inline footer-icons">
+
+                    <li class="list-inline-item border border-light rounded-circle text-center">
+                        <a target="_blank" href="#"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
+                    </li>
+
+                    <li class="list-inline-item border border-light rounded-circle text-center">
+                        <a target="_blank" href="#"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
+                    </li>
+
+                    <li class="list-inline-item border border-light rounded-circle text-center">
+                        <a target="_blank" href="#"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
+                    </li>
+
+                    <li class="list-inline-item border border-light rounded-circle text-center">
+                        <a target="_blank" href="#"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- SUBSCRIBE -->
+            <div class="col-auto">
+                <div class="input-group">
+                    <input type="text" class="form-control bg-dark border-light text-light" placeholder="Email address">
+                    <button class="btn btn-success text-light">Subscribe</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="w-100 bg-black py-3">
+        <div class="container">
+            <p class="text-light mb-0 text-center">
+                © 2026 Modeline — All Rights Reserved
+            </p>
+        </div>
+    </div>
+</footer>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
+
+
+
+<!-- MAP SCRIPT -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script>
+    var map = L.map('mapid').setView([44.7866, 20.4489], 13);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap'
+    }).addTo(map);
+
+    L.marker([44.7866, 20.4489]).addTo(map)
+        .bindPopup("Modeline Location")
+        .openPopup();
+</script>
+
+<!-- FORM VALIDATION -->
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let msg = document.getElementById("message").value;
+    let output = document.getElementById("formMsg");
+
+    let emailRegex = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+    try {
+        if(name.length < 3) throw "Name must be at least 3 characters";
+        if(!email.match(emailRegex)) throw "Invalid email format";
+        if(msg.length < 10) throw "Message must be at least 10 characters";
+
+        output.innerHTML = "Message sent successfully!";
+        output.style.color = "green";
+
+    } catch(err) {
+        output.innerHTML = err;
+        output.style.color = "red";
+    }
+});
+</script>
+

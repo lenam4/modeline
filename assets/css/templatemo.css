@@ -1,0 +1,234 @@
+/*
+TemplateMo 559 Zay Shop
+MODIFIED COLORS - Modeline theme
+*/
+
+/* Typography */
+body, ul, li, p, a, label, input, div {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px !important;
+  font-weight: 300 !important;
+}
+
+.h1 {
+  font-size: 48px !important;
+  font-weight: 200 !important;
+}
+
+.h2 {
+  font-size: 30px !important;
+  font-weight: 300;
+}
+
+.h3 {
+  font-size: 22px !important;
+}
+
+/* General */
+.logo { font-weight: 500 !important;}
+
+.text-warning { color: #ede861 !important;}
+.text-muted { color: #bcbcbc !important;}
+
+/* ✨ GLAVNA BOJA */
+.text-success { color: #C88EA7 !important;}
+.bg-success { background-color: #C88EA7 !important;}
+
+.btn-success {
+  background-color: #C88EA7 !important;
+  border-color: #B97C95 !important;
+}
+
+/* ✨ HOVER */
+.pagination .page-link:hover,
+.pagination .page-link.active {
+  background-color: #B97C95;
+  color: #fff;
+}
+
+/* ✨ POZADINE */
+.bg-dark { background-color: #4B3B42 !important;}
+.bg-light { background-color: #F8F1F4 !important;}
+.bg-black { background-color: #3E3137 !important;}
+.text-light { color: #F3E7DD !important;}
+
+
+/* NAV */
+#templatemo_nav_top { min-height: 40px;}
+#templatemo_nav_top * { font-size: .9em !important;}
+
+#main_nav a {
+    position: relative;
+    margin-right: 25px;
+}
+
+#main_nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #C88EA7;
+    transition: 0.3s;
+}
+
+#main_nav a:hover::after {
+    width: 100%;
+}
+
+#templatemo_main_nav .navbar .nav-icon { margin-right: 20px;}
+
+
+/* HERO */
+#template-mo-zay-hero-carousel {
+  background: #F8F1F4 !important;
+}
+
+
+/* ACCORDION */
+.templatemo-accordion a { color: #000;}
+.templatemo-accordion a:hover { color: #333d4a;}
+
+
+/* SHOP */
+.shop-top-menu a:hover { color: #B97C95 !important;}
+
+
+/* PRODUCT */
+.product-wap {
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.10);
+}
+
+.product-wap .product-color-dot.color-dot-red { background:#f71515;}
+.product-wap .product-color-dot.color-dot-blue { background:#6db4fe;}
+.product-wap .product-color-dot.color-dot-black { background:#000;}
+.product-wap .product-color-dot.color-dot-light { background:#e0e0e0;}
+.product-wap .product-color-dot.color-dot-green { background:#0bff7e;}
+
+.card.product-wap .product-overlay {
+  background: rgba(0,0,0,0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: .3s;
+}
+
+.card.product-wap:hover .product-overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+.card.product-wap a { color: #000;}
+
+
+/* CAROUSEL HERO */
+#template-mo-zay-hero-carousel .carousel-indicators li {
+  margin-top: -50px;
+  background-color: #C88EA7;
+}
+
+#template-mo-zay-hero-carousel .carousel-control-next i,
+#template-mo-zay-hero-carousel .carousel-control-prev i {
+  color: #C88EA7 !important;
+  font-size: 2.8em !important;
+}
+
+
+/* SERVICES */
+.services-icon-wap { transition: .3s;}
+
+.services-icon-wap:hover {
+  background: #B97C95;
+}
+
+.services-icon-wap:hover,
+.services-icon-wap:hover i {
+  color: #fff;
+}
+
+
+/* FOOTER */
+#tempaltemo_footer a:hover {
+  color: #B97C95;
+}
+
+/* footer links fix */
+.footer-link-list a {
+    color: #F3E7DD !important;
+    text-decoration: none !important;
+}
+
+.footer-link-list a:hover {
+    color: #C88EA7 !important;
+}
+
+/* social icons */
+.footer-icons a {
+    color: #F3E7DD !important;
+    text-decoration: none !important;
+}
+
+.footer-icons a:hover {
+    color: #C88EA7 !important;
+}
+
+.author-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 100px 50px;
+    background-color: #fdf6f0;
+}
+
+.author-image {
+    flex: 1;
+    max-width: 400px;
+}
+
+.author-image img {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 5px 20px rgba(219, 165, 214, 0.5);
+}
+
+.author-info {
+    flex: 1;
+    font-family: 'Poppins', sans-serif;
+    color: #5a3e36;
+}
+
+.author-info h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.author-info p {
+    font-size: 18px;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.author-info span {
+    font-weight: 600;
+    color: #dba5d6;
+}
+
+.hero-img-wrapper {
+    position: relative;
+}
+
+.hero-img {
+    max-width: 420px;
+    width: 100%;
+    image-rendering: auto;
+    filter: contrast(1.05) sharpen(0.3);
+}
+
+.category-img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+

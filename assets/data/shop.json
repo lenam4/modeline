@@ -1,0 +1,362 @@
+[
+  {
+    "id": 1,
+    "name": "Silk Evening Dress",
+    "category": "dress",
+    "price": {
+      "regular": 75,
+      "discount": {
+        "percentage": 15,
+        "active": true
+      },
+      "currency": "USD"
+    },
+    "availability": [
+      { "size": "S", "warehouse": { "stock": 3, "location": "BG-1" } },
+      { "size": "M", "warehouse": { "stock": 5, "location": "NS-1" } },
+      { "size": "L", "warehouse": { "stock": 2, "location": "BG-2" } }
+    ],
+    "colors": [
+      { "name": "rose", "hex": "#C88EA7" },
+      { "name": "black", "hex": "#000000" }
+    ],
+    "details": {
+      "brand": "Modeline",
+      "specifications": {
+        "material": "silk",
+        "season": "spring/summer",
+        "fit": "slim"
+      },
+      "rating": { "average": 4.8, "reviewsCount": 12 }
+    },
+    "image": "assets/img/shop_01.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Summer Midi Dress",
+    "category": "dress",
+    "price": {
+      "regular": 55,
+      "currency": "USD"
+    },
+    "availability": [
+      { "size": "XS", "warehouse": { "stock": 4, "location": "BG-2" } },
+      { "size": "S", "warehouse": { "stock": 6, "location": "NS-1" } },
+      { "size": "M", "warehouse": { "stock": 3, "location": "NS-2" } }
+    ],
+    "colors": [
+      { "name": "white", "hex": "#FFFFFF" },
+      { "name": "beige", "hex": "#F3E7DD" }
+    ],
+    "details": {
+      "brand": "Modeline",
+      "specifications": {
+        "material": "cotton",
+        "season": "summer",
+        "fit": "regular"
+      },
+      "rating": { "average": 4.5, "reviewsCount": 8 }
+    },
+    "image": "assets/img/shop_02.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Black Mini Dress",
+    "category": "dress",
+    "price": {
+      "regular": 65,
+      "discount": {
+        "percentage": 20,
+        "active": true
+      },
+      "currency": "USD"
+    },
+    "availability": [
+      { "size": "S", "warehouse": { "stock": 2, "location": "BG-1" } },
+      { "size": "M", "warehouse": { "stock": 4, "location": "NS-2" } }
+    ],
+    "colors": [
+      { "name": "black", "hex": "#000000" }
+    ],
+    "details": {
+      "brand": "Modeline",
+      "specifications": {
+        "material": "elastane",
+        "season": "all season",
+        "fit": "bodycon"
+      },
+      "rating": { "average": 4.9, "reviewsCount": 16 }
+    },
+    "image": "assets/img/shop_03.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Elegant V-Neck Blouse",
+    "category": "blouse",
+    "price": {
+      "regular": 35,
+      "discount": {
+        "percentage": 5,
+        "active": true
+      },
+      "currency": "USD"
+    },
+    "availability": [
+      { "size": "M", "warehouse": { "stock": 7, "location": "BG-1" } },
+      { "size": "L", "warehouse": { "stock": 5, "location": "NS-2" } },
+      { "size": "XL", "warehouse": { "stock": 3, "location": "BG-2" } }
+    ],
+    "colors": [
+      { "name": "white", "hex": "#FFFFFF" },
+      { "name": "pink", "hex": "#E9A9C4" }
+    ],
+    "details": {
+      "brand": "Modeline",
+      "specifications": {
+        "material": "viscose",
+        "season": "spring",
+        "fit": "slim"
+      },
+      "rating": { "average": 4.3, "reviewsCount": 5 }
+    },
+    "image": "assets/img/shop_04.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Satin Blouse",
+    "category": "blouse",
+    "price": {
+      "regular": 45,
+      "discount": {
+        "percentage": 12,
+        "active": true
+      },
+      "currency": "USD"
+    },
+    "availability": [
+      { "size": "S", "warehouse": { "stock": 4, "location": "NS-1" } },
+      { "size": "M", "warehouse": { "stock": 6, "location": "BG-1" } }
+    ],
+    "colors": [
+      { "name": "cream", "hex": "#F8F1F4" },
+      { "name": "black", "hex": "#000000" }
+    ],
+    "details": {
+      "brand": "Modeline",
+      "specifications": {
+        "material": "satin",
+        "season": "all season",
+        "fit": "regular"
+      },
+      "rating": { "average": 4.6, "reviewsCount": 9 }
+    },
+    "image": "assets/img/shop_05.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Oversized Blouse",
+    "category": "blouse",
+    "price": {
+      "regular": 30,
+      "currency": "USD"
+    },
+    "availability": [
+      { "size": "L", "warehouse": { "stock": 5, "location": "BG-1" } },
+      { "size": "XL", "warehouse": { "stock": 4, "location": "NS-1" } }
+    ],
+    "colors": [
+      { "name": "blue", "hex": "#6DB4FE" },
+      { "name": "white", "hex": "#FFFFFF" }
+    ],
+    "details": {
+      "brand": "Modeline",
+      "specifications": {
+        "material": "linen",
+        "season": "spring/summer",
+        "fit": "oversized"
+      },
+      "rating": { "average": 4.1, "reviewsCount": 3 }
+    },
+    "image": "assets/img/shop_06.jpg"
+  },
+  {
+    "id": 7,
+    "name": "High Waist Pants",
+    "category": "pants",
+    "price": {
+      "regular": 60,
+      "discount": {
+        "percentage": 18,
+        "active": true
+      },
+      "currency": "USD"
+    },
+    "availability": [
+      { "size": "S", "warehouse": { "stock": 5, "location": "BG-2" } },
+      { "size": "M", "warehouse": { "stock": 5, "location": "NS-1" } },
+      { "size": "L", "warehouse": { "stock": 3, "location": "NS-2" } }
+    ],
+    "colors": [
+      { "name": "black", "hex": "#000000" },
+      { "name": "gray", "hex": "#888888" }
+    ],
+    "details": {
+      "brand": "Modeline",
+      "specifications": {
+        "material": "polyester",
+        "season": "autumn/winter",
+        "fit": "wide"
+      },
+      "rating": { "average": 4.7, "reviewsCount": 10 }
+    },
+    "image": "assets/img/shop_07.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Slim Pants",
+    "category": "pants",
+    "price": {
+      "regular": 50,
+      "discount": {
+        "percentage": 10,
+        "active": true
+      },
+      "currency": "USD"
+    },
+    "availability": [
+      { "size": "XS", "warehouse": { "stock": 3, "location": "BG-1" } },
+      { "size": "S", "warehouse": { "stock": 4, "location": "NS-1" } },
+      { "size": "M", "warehouse": { "stock": 2, "location": "BG-2" } }
+    ],
+    "colors": [
+      { "name": "black", "hex": "#000000" }
+    ],
+    "details": {
+      "brand": "Modeline",
+      "specifications": {
+        "material": "cotton",
+        "season": "all season",
+        "fit": "slim"
+      },
+      "rating": { "average": 4.4, "reviewsCount": 7 }
+    },
+    "image": "assets/img/shop_08.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Linen Pants",
+    "category": "pants",
+    "price": {
+      "regular": 55,
+      "currency": "USD"
+    },
+    "availability": [
+      { "size": "M", "warehouse": { "stock": 6, "location": "NS-2" } },
+      { "size": "L", "warehouse": { "stock": 4, "location": "BG-1" } }
+    ],
+    "colors": [
+      { "name": "beige", "hex": "#D6C2B0" },
+      { "name": "white", "hex": "#FFFFFF" }
+    ],
+    "details": {
+      "brand": "Modeline",
+      "specifications": {
+        "material": "linen",
+        "season": "spring/summer",
+        "fit": "regular"
+      },
+      "rating": { "average": 4.2, "reviewsCount": 6 }
+    },
+    "image": "assets/img/shop_09.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Pleated Skirt",
+    "category": "skirt",
+    "price": {
+      "regular": 40,
+      "discount": {
+        "percentage": 14,
+        "active": true
+      },
+      "currency": "USD"
+    },
+    "availability": [
+      { "size": "S", "warehouse": { "stock": 4, "location": "NS-2" } },
+      { "size": "M", "warehouse": { "stock": 5, "location": "BG-2" } }
+    ],
+    "colors": [
+      { "name": "pink", "hex": "#E9A9C4" },
+      { "name": "beige", "hex": "#F3E7DD" }
+    ],
+    "details": {
+      "brand": "Modeline",
+      "specifications": {
+        "material": "tulle",
+        "season": "spring",
+        "fit": "regular"
+      },
+      "rating": { "average": 4.5, "reviewsCount": 6 }
+    },
+    "image": "assets/img/shop_01.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Eco Leather Mini Skirt",
+    "category": "skirt",
+    "price": {
+      "regular": 45,
+      "discount": {
+        "percentage": 20,
+        "active": true
+      },
+      "currency": "USD"
+    },
+    "availability": [
+      { "size": "XS", "warehouse": { "stock": 2, "location": "BG-1" } },
+      { "size": "S", "warehouse": { "stock": 3, "location": "NS-1" } },
+      { "size": "M", "warehouse": { "stock": 2, "location": "BG-2" } }
+    ],
+    "colors": [
+      { "name": "black", "hex": "#000000" }
+    ],
+    "details": {
+      "brand": "Modeline",
+      "specifications": {
+        "material": "eco leather",
+        "season": "autumn/winter",
+        "fit": "slim"
+      },
+      "rating": { "average": 4.6, "reviewsCount": 11 }
+    },
+    "image": "assets/img/shop_02.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Long Satin Skirt",
+    "category": "skirt",
+    "price": {
+      "regular": 58,
+      "currency": "USD"
+    },
+    "availability": [
+      { "size": "M", "warehouse": { "stock": 5, "location": "NS-1" } },
+      { "size": "L", "warehouse": { "stock": 4, "location": "BG-1" } },
+      { "size": "XL", "warehouse": { "stock": 2, "location": "NS-2" } }
+    ],
+    "colors": [
+      { "name": "champagne", "hex": "#F7E7CE" },
+      { "name": "olive", "hex": "#708238" }
+    ],
+    "details": {
+      "brand": "Modeline",
+      "specifications": {
+        "material": "satin",
+        "season": "all season",
+        "fit": "flowy"
+      },
+      "rating": { "average": 4.8, "reviewsCount": 14 }
+    },
+    "image": "assets/img/shop_03.jpg"
+  }
+]
