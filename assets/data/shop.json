@@ -1,27 +1,20 @@
 [
   {
     "id": 1,
-    "name": "Silk Evening Dress",
-    "category": "dress",
-    "price": {
-      "regular": 75,
-      "discount": {
-        "percentage": 15,
-        "active": true
-      },
-      "currency": "USD"
-    },
+    "name": "Beige Satin Blouse",
+    "category": "blouse",
+    "price": { "regular": 75, "discount": 15, "currency": "$" },
     "availability": [
-      { "size": "S", "warehouse": { "stock": 3, "location": "BG-1" } },
-      { "size": "M", "warehouse": { "stock": 5, "location": "NS-1" } },
-      { "size": "L", "warehouse": { "stock": 2, "location": "BG-2" } }
+      { "size": "S", "stock": 3},
+      { "size": "M", "stock": 2},
+      { "size": "L", "stock": 1}
     ],
-    "colors": [
-      { "name": "rose", "hex": "#C88EA7" },
-      { "name": "black", "hex": "#000000" }
-    ],
+    "isNew": true,
+    "isFeatured": {
+      "description": "A clean and versatile accessory made for everyday styling."
+    },
     "details": {
-      "brand": "Modeline",
+      "brand": "Mango",
       "specifications": {
         "material": "silk",
         "season": "spring/summer",
@@ -33,23 +26,18 @@
   },
   {
     "id": 2,
-    "name": "Summer Midi Dress",
+    "name": "Midnight Elegance Dress",
     "category": "dress",
-    "price": {
-      "regular": 55,
-      "currency": "USD"
-    },
+    "price": { "regular": 105, "discount": null, "currency": "$" },
     "availability": [
-      { "size": "XS", "warehouse": { "stock": 4, "location": "BG-2" } },
-      { "size": "S", "warehouse": { "stock": 6, "location": "NS-1" } },
-      { "size": "M", "warehouse": { "stock": 3, "location": "NS-2" } }
+      { "size": "XS", "stock": 3},
+      { "size": "S", "stock": 7},
+      { "size": "M", "stock": 4}
     ],
-    "colors": [
-      { "name": "white", "hex": "#FFFFFF" },
-      { "name": "beige", "hex": "#F3E7DD" }
-    ],
+    "isNew": false,
+    "isFeatured": false,
     "details": {
-      "brand": "Modeline",
+      "brand": "Esprit",
       "specifications": {
         "material": "cotton",
         "season": "summer",
@@ -61,25 +49,17 @@
   },
   {
     "id": 3,
-    "name": "Black Mini Dress",
-    "category": "dress",
-    "price": {
-      "regular": 65,
-      "discount": {
-        "percentage": 20,
-        "active": true
-      },
-      "currency": "USD"
-    },
+    "name": "Azure Tailored Pants",
+    "category": "pants",
+    "price": { "regular": 70, "discount": 20, "currency": "$" },
     "availability": [
-      { "size": "S", "warehouse": { "stock": 2, "location": "BG-1" } },
-      { "size": "M", "warehouse": { "stock": 4, "location": "NS-2" } }
+      { "size": "S", "stock": 1},
+      { "size": "M", "stock": 1}
     ],
-    "colors": [
-      { "name": "black", "hex": "#000000" }
-    ],
+    "isNew": false,
+    "isFeatured": false,
     "details": {
-      "brand": "Modeline",
+      "brand": "Sisley",
       "specifications": {
         "material": "elastane",
         "season": "all season",
@@ -91,27 +71,18 @@
   },
   {
     "id": 4,
-    "name": "Elegant V-Neck Blouse",
+    "name": "Mocha Grace Blouse",
     "category": "blouse",
-    "price": {
-      "regular": 35,
-      "discount": {
-        "percentage": 5,
-        "active": true
-      },
-      "currency": "USD"
-    },
+    "price": { "regular": 35, "discount": 5, "currency": "$" },
     "availability": [
-      { "size": "M", "warehouse": { "stock": 7, "location": "BG-1" } },
-      { "size": "L", "warehouse": { "stock": 5, "location": "NS-2" } },
-      { "size": "XL", "warehouse": { "stock": 3, "location": "BG-2" } }
+      { "size": "M", "stock": 4},
+      { "size": "L", "stock": 3},
+      { "size": "XL", "stock": 8}
     ],
-    "colors": [
-      { "name": "white", "hex": "#FFFFFF" },
-      { "name": "pink", "hex": "#E9A9C4" }
-    ],
+    "isNew": true,
+    "isFeatured": false,
     "details": {
-      "brand": "Modeline",
+      "brand": "Mohito",
       "specifications": {
         "material": "viscose",
         "season": "spring",
@@ -123,26 +94,19 @@
   },
   {
     "id": 5,
-    "name": "Satin Blouse",
-    "category": "blouse",
-    "price": {
-      "regular": 45,
-      "discount": {
-        "percentage": 12,
-        "active": true
-      },
-      "currency": "USD"
-    },
+    "name": "Cocoa Chic Pants",
+    "category": "pants",
+    "price": { "regular": 65, "discount": 12, "currency": "$" },
     "availability": [
-      { "size": "S", "warehouse": { "stock": 4, "location": "NS-1" } },
-      { "size": "M", "warehouse": { "stock": 6, "location": "BG-1" } }
+      { "size": "S", "stock": 1},
+      { "size": "M", "stock": 1}
     ],
-    "colors": [
-      { "name": "cream", "hex": "#F8F1F4" },
-      { "name": "black", "hex": "#000000" }
-    ],
+    "isNew": false,
+    "isFeatured": {
+      "description": "A contemporary outfit combining comfort and modern style"
+    },
     "details": {
-      "brand": "Modeline",
+      "brand": "OVS",
       "specifications": {
         "material": "satin",
         "season": "all season",
@@ -154,22 +118,19 @@
   },
   {
     "id": 6,
-    "name": "Oversized Blouse",
-    "category": "blouse",
-    "price": {
-      "regular": 30,
-      "currency": "USD"
-    },
+    "name": "Pure White Summer Dress",
+    "category": "dress",
+    "price": { "regular": 85, "discount": null, "currency": "$" },
     "availability": [
-      { "size": "L", "warehouse": { "stock": 5, "location": "BG-1" } },
-      { "size": "XL", "warehouse": { "stock": 4, "location": "NS-1" } }
+      { "size": "L", "stock": 7},
+      { "size": "XL", "stock": 11}
     ],
-    "colors": [
-      { "name": "blue", "hex": "#6DB4FE" },
-      { "name": "white", "hex": "#FFFFFF" }
-    ],
+    "isNew": true,
+    "isFeatured": {
+      "description": "A refined piece designed to bring effortless elegance to your wardrobe."
+    },
     "details": {
-      "brand": "Modeline",
+      "brand": "Orsay",
       "specifications": {
         "material": "linen",
         "season": "spring/summer",
@@ -181,27 +142,18 @@
   },
   {
     "id": 7,
-    "name": "High Waist Pants",
-    "category": "pants",
-    "price": {
-      "regular": 60,
-      "discount": {
-        "percentage": 18,
-        "active": true
-      },
-      "currency": "USD"
-    },
+    "name": "Emerald Soft Blouse",
+    "category": "blouse",
+    "price": { "regular": 60, "discount": 18, "currency": "$" },
     "availability": [
-      { "size": "S", "warehouse": { "stock": 5, "location": "BG-2" } },
-      { "size": "M", "warehouse": { "stock": 5, "location": "NS-1" } },
-      { "size": "L", "warehouse": { "stock": 3, "location": "NS-2" } }
+      { "size": "S", "stock": 5},
+      { "size": "M", "stock": 8},
+      { "size": "L", "stock": 5}
     ],
-    "colors": [
-      { "name": "black", "hex": "#000000" },
-      { "name": "gray", "hex": "#888888" }
-    ],
+    "isNew": false,
+    "isFeatured": false,
     "details": {
-      "brand": "Modeline",
+      "brand": "Promod",
       "specifications": {
         "material": "polyester",
         "season": "autumn/winter",
@@ -213,26 +165,18 @@
   },
   {
     "id": 8,
-    "name": "Slim Pants",
+    "name": "Urban Grey Slim Pants",
     "category": "pants",
-    "price": {
-      "regular": 50,
-      "discount": {
-        "percentage": 10,
-        "active": true
-      },
-      "currency": "USD"
-    },
+    "price": { "regular": 70, "discount": 10, "currency": "$" },
     "availability": [
-      { "size": "XS", "warehouse": { "stock": 3, "location": "BG-1" } },
-      { "size": "S", "warehouse": { "stock": 4, "location": "NS-1" } },
-      { "size": "M", "warehouse": { "stock": 2, "location": "BG-2" } }
+      { "size": "XS", "stock": 2},
+      { "size": "S", "stock": 15},
+      { "size": "M", "stock": 9}
     ],
-    "colors": [
-      { "name": "black", "hex": "#000000" }
-    ],
+    "isNew": false,
+    "isFeatured": false,
     "details": {
-      "brand": "Modeline",
+      "brand": "Calliope",
       "specifications": {
         "material": "cotton",
         "season": "all season",
@@ -244,22 +188,17 @@
   },
   {
     "id": 9,
-    "name": "Linen Pants",
-    "category": "pants",
-    "price": {
-      "regular": 55,
-      "currency": "USD"
-    },
+    "name": "Longline Classic Blouse",
+    "category": "blouse",
+    "price": { "regular": 55, "discount": null, "currency": "$" },
     "availability": [
-      { "size": "M", "warehouse": { "stock": 6, "location": "NS-2" } },
-      { "size": "L", "warehouse": { "stock": 4, "location": "BG-1" } }
+      { "size": "M", "stock": 4},
+      { "size": "L", "stock": 5}
     ],
-    "colors": [
-      { "name": "beige", "hex": "#D6C2B0" },
-      { "name": "white", "hex": "#FFFFFF" }
-    ],
+    "isNew": false,
+    "isFeatured": false,
     "details": {
-      "brand": "Modeline",
+      "brand": "Mango",
       "specifications": {
         "material": "linen",
         "season": "spring/summer",
@@ -271,26 +210,17 @@
   },
   {
     "id": 10,
-    "name": "Pleated Skirt",
-    "category": "skirt",
-    "price": {
-      "regular": 40,
-      "discount": {
-        "percentage": 14,
-        "active": true
-      },
-      "currency": "USD"
-    },
+    "name": "Striped Everyday Pants",
+    "category": "pants",
+    "price": { "regular": 90, "discount": 14, "currency": "$" },
     "availability": [
-      { "size": "S", "warehouse": { "stock": 4, "location": "NS-2" } },
-      { "size": "M", "warehouse": { "stock": 5, "location": "BG-2" } }
+      { "size": "S", "stock": 6},
+      { "size": "M", "stock": 8}
     ],
-    "colors": [
-      { "name": "pink", "hex": "#E9A9C4" },
-      { "name": "beige", "hex": "#F3E7DD" }
-    ],
+    "isNew": false,
+    "isFeatured": false,
     "details": {
-      "brand": "Modeline",
+      "brand": "Esprit",
       "specifications": {
         "material": "tulle",
         "season": "spring",
@@ -302,26 +232,18 @@
   },
   {
     "id": 11,
-    "name": "Eco Leather Mini Skirt",
-    "category": "skirt",
-    "price": {
-      "regular": 45,
-      "discount": {
-        "percentage": 20,
-        "active": true
-      },
-      "currency": "USD"
-    },
+    "name": "White Muse Dress",
+    "category": "dress",
+    "price": { "regular": 65, "discount": 20, "currency": "$" },
     "availability": [
-      { "size": "XS", "warehouse": { "stock": 2, "location": "BG-1" } },
-      { "size": "S", "warehouse": { "stock": 3, "location": "NS-1" } },
-      { "size": "M", "warehouse": { "stock": 2, "location": "BG-2" } }
+      { "size": "XS", "stock": 7},
+      { "size": "S", "stock": 4},
+      { "size": "M", "stock": 3}
     ],
-    "colors": [
-      { "name": "black", "hex": "#000000" }
-    ],
+    "isNew": true,
+    "isFeatured": false,
     "details": {
-      "brand": "Modeline",
+      "brand": "Mohito",
       "specifications": {
         "material": "eco leather",
         "season": "autumn/winter",
@@ -333,23 +255,18 @@
   },
   {
     "id": 12,
-    "name": "Long Satin Skirt",
-    "category": "skirt",
-    "price": {
-      "regular": 58,
-      "currency": "USD"
-    },
+    "name": "Golden Bloom Dress",
+    "category": "dress",
+    "price": { "regular": 58, "discount": null, "currency": "$" },
     "availability": [
-      { "size": "M", "warehouse": { "stock": 5, "location": "NS-1" } },
-      { "size": "L", "warehouse": { "stock": 4, "location": "BG-1" } },
-      { "size": "XL", "warehouse": { "stock": 2, "location": "NS-2" } }
+      { "size": "M", "stock": 3},
+      { "size": "L", "stock": 12},
+      { "size": "XL", "stock": 8}
     ],
-    "colors": [
-      { "name": "champagne", "hex": "#F7E7CE" },
-      { "name": "olive", "hex": "#708238" }
-    ],
+    "isNew": false,
+    "isFeatured": false,
     "details": {
-      "brand": "Modeline",
+      "brand": "Sisley",
       "specifications": {
         "material": "satin",
         "season": "all season",
