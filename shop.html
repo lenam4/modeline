@@ -43,7 +43,7 @@
                 <div class="d-flex align-items-center">
                     <a class="nav-icon position-relative text-decoration-none text-dark" href="cart.html">
                         <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success text-white">0</span>
+                        <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success text-white">0</span>
                     </a>
                 </div>
             </div>
@@ -538,8 +538,13 @@
     </div>
 </footer>
 
+
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <div id="cart-toast" class="cart-toast">
+    Product added to cart ✓
+    </div>
 </body>
 </html>

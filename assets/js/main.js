@@ -155,6 +155,15 @@ function renderFooter(menuData){
     document.querySelector(".footer").innerHTML = data;
 }
 
+function getCategoryName(categoryId){
+    for(let i = 0; i < categoriesArray.length; i++){
+        if(categoriesArray[i].id == categoryId){
+            return categoriesArray[i].name;
+        }
+    }
+    return "";
+}
+
 function renderProductCard(shop){
     return `<div class="col-md-4">
                 <div class="card mb-4 product-wap rounded-0">
@@ -172,7 +181,7 @@ function renderProductCard(shop){
                         </ul>
                         ${renderStock(shop.availability)}
                         <p class="mb-0">${renderPrice(shop.price)}</p>
-                        <button class="mt-3 btn btn-success w-100">
+                        <button class="mt-3 btn btn-success w-100" onclick="addToCart(${shop.id})">
                             <i class="fas fa-cart-plus"></i> Add to Cart
                         </button>
                     </div>
@@ -290,11 +299,14 @@ function renderStock(array){
 // }
 
 function renderDropDown(firstOptionText, arrayData, id, valueField = "id"){
+    let el = document.getElementById(id);
+    if(!el) return;
+
     let data = `<option value="0">${firstOptionText}</option>`;
     for(let item of arrayData){
         data += `<option value="${item[valueField]}">${item.name}</option>`;
     }
-    document.getElementById(id).innerHTML = data;
+    el.innerHTML = data;
 }
 
 function filterSort(){
@@ -347,7 +359,223 @@ function filterSort(){
     
     
 }
-document.getElementById("categories").addEventListener("change", filterSort);
-document.getElementById("sizes").addEventListener("change", filterSort);
-document.getElementById("brands").addEventListener("change", filterSort);
-document.getElementById("sort").addEventListener("change", filterSort);
+if(document.getElementById("categories")){
+    document.getElementById("categories").addEventListener("change", filterSort);
+}
+
+if(document.getElementById("sizes")){
+    document.getElementById("sizes").addEventListener("change", filterSort);
+}
+
+if(document.getElementById("brands")){
+    document.getElementById("brands").addEventListener("change", filterSort);
+}
+
+if(document.getElementById("sort")){
+    document.getElementById("sort").addEventListener("change", filterSort);
+}
+
+
+const CART_KEY = "modeline_cart";
+
+// Ucitavanje korpe
+function getCart() {
+    return JSON.parse(localStorage.getItem(CART_KEY)) || [];
+}
+
+function saveCart(cart) {
+    localStorage.setItem(CART_KEY, JSON.stringify(cart));
+}
+
+// Badge broj proizvoda
+function updateCartCount() {
+    const cart = getCart();
+    const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+    const badge = document.getElementById("cart-count");
+    if (badge) {
+        badge.textContent = count;
+    }
+}
+
+// Dodavanje proizvoda u korpu
+function addToCart(productId) {
+    const cart = getCart();
+    const product = arrayShop.find(item => item.id === productId);
+
+    if (!product) return;
+
+    const existingProduct = cart.find(item => item.id === product.id);
+
+    if (existingProduct) {
+        existingProduct.quantity += 1;
+    } else {
+        const firstAvailableSize = product.availability.length ? product.availability[0].size : "";
+
+        cart.push({
+            id: product.id,
+            title: product.name,
+            price: finalPrice(product),
+            image: product.image,
+            category: product.category,
+            size: firstAvailableSize,
+            brand: product.details.brand,
+            quantity: 1,
+            currency: product.price.currency
+        });
+    }
+
+    saveCart(cart);
+    updateCartCount();
+    showToast();
+}
+
+// Promena kolicine
+function changeQuantity(productId, change) {
+    let cart = getCart();
+
+    cart = cart.map(item => {
+        if (item.id === productId) {
+            item.quantity += change;
+            if (item.quantity < 1) item.quantity = 1;
+        }
+        return item;
+    });
+
+    saveCart(cart);
+    renderCart();
+    updateCartCount();
+}
+
+// Brisanje proizvoda
+function removeFromCart(productId) {
+    let cart = getCart();
+    cart = cart.filter(item => item.id !== productId);
+
+    saveCart(cart);
+    renderCart();
+    updateCartCount();
+}
+
+// Prikaz korpe
+function renderCart(){
+    let cart = getCart();
+    console.log(cart);
+    let cartItemsContainer = document.getElementById("cart-items");
+    let emptyCart = document.getElementById("empty-cart");
+
+    let subtotalEl = document.getElementById("cart-subtotal");
+    let shippingEl = document.getElementById("cart-shipping");
+    let discountEl = document.getElementById("cart-discount");
+    let totalEl = document.getElementById("cart-total");
+
+    if(!cartItemsContainer){
+        return;
+    }
+
+    if(cart.length == 0){
+        cartItemsContainer.innerHTML = "";
+        if(emptyCart){
+            emptyCart.classList.remove("d-none");
+        }
+
+        if(subtotalEl){
+            subtotalEl.innerHTML = "$0.00";
+        }
+        if(shippingEl){
+            shippingEl.innerHTML = "$0.00";
+        }
+        if(discountEl){
+            discountEl.innerHTML = "$0.00";
+        }
+        if(totalEl){
+            totalEl.innerHTML = "$0.00";
+        }
+
+        return;
+    }
+
+    if(emptyCart){
+        emptyCart.classList.add("d-none");
+    }
+
+    let ispis = "";
+    let subtotal = 0;
+
+    for(let i = 0; i < cart.length; i++){
+        let item = cart[i];
+        let itemTotal = item.price * item.quantity;
+        subtotal += itemTotal;
+
+        ispis += `
+            <div class="cart-item">
+                <img src="${item.image}" alt="${item.title}" class="cart-item-img">
+
+                <div class="cart-item-info">
+                    <h3 class="cart-item-title">${item.title}</h3>
+                    <p class="cart-item-meta">
+                        Size: ${item.size} | Brand: ${item.brand}
+                    </p>
+                    <p class="cart-item-price">$${item.price.toFixed(2)}</p>
+
+                    <div class="qty-box">
+                        <button class="qty-btn" onclick="changeQuantity(${item.id}, -1)">-</button>
+                        <span class="qty-number">${item.quantity}</span>
+                        <button class="qty-btn" onclick="changeQuantity(${item.id}, 1)">+</button>
+                    </div>
+
+                    <button class="remove-btn" onclick="removeFromCart(${item.id})">
+                        <i class="fa fa-trash me-1"></i> Remove
+                    </button>
+                </div>
+
+                <div class="cart-item-total">
+                    $${itemTotal.toFixed(2)}
+                </div>
+            </div>
+        `;
+    }
+
+    cartItemsContainer.innerHTML = ispis;
+
+    let shipping = 0;
+    if(subtotal > 0){
+        shipping = 10;
+    }
+
+    let discount = 0;
+    let total = subtotal + shipping - discount;
+
+    if(subtotalEl){
+        subtotalEl.innerHTML = "$" + subtotal.toFixed(2);
+    }
+    if(shippingEl){
+        shippingEl.innerHTML = "$" + shipping.toFixed(2);
+    }
+    if(discountEl){
+        discountEl.innerHTML = "$" + discount.toFixed(2);
+    }
+    if(totalEl){
+        totalEl.innerHTML = "$" + total.toFixed(2);
+    }
+}
+
+// Pokretanje na load
+document.addEventListener("DOMContentLoaded", () => {
+    updateCartCount();
+    renderCart();
+});
+
+function showToast(){
+    let toast = document.getElementById("cart-toast");
+
+    if(!toast){
+        return;
+    }
+
+    toast.classList.add("show");
+
+    setTimeout(function(){
+        toast.classList.remove("show");
+    }, 2000);
+}
