@@ -278,3 +278,65 @@ body, ul, li, p, a, label, input, div {
     flex-direction: column;
     justify-content: space-between;
 }
+
+#featuredProducts .col-md-4{
+    display: flex;
+}
+
+#featuredProducts .product-wap{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#featuredProducts .card-body{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#featuredProducts .card-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.category-select {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 16px;
+    font-weight: 400;
+
+    border: none;
+    border-bottom: 2px solid #e6d7de;
+
+    background-color: transparent;
+    color: #4B3B42;
+
+    transition: 0.3s ease;
+}
+
+/* hover */
+.category-select:hover {
+    border-bottom: 2px solid #C88EA7;
+}
+
+/* focus */
+.category-select:focus {
+    outline: none;
+    border-bottom: 2px solid #C88EA7;
+}
+
+/* uklanja default strelicu (bitno za izgled) */
+.category-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+#sort:focus {
+    outline: none;
+    border: 2px solid #C88EA7;
+    box-shadow: none;
+}

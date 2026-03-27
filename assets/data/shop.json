@@ -2,8 +2,9 @@
   {
     "id": 1,
     "name": "Beige Satin Blouse",
-    "category": "blouse",
-    "price": { "regular": 75, "discount": 15, "currency": "$" },
+    "category": 2,
+    "date": "2025-01-12",
+    "price": { "regular": 75, "discount": null, "currency": "$" },
     "availability": [
       { "size": "S", "stock": 3},
       { "size": "M", "stock": 2},
@@ -27,7 +28,8 @@
   {
     "id": 2,
     "name": "Midnight Elegance Dress",
-    "category": "dress",
+    "category": 1,
+    "date": "2024-11-05",
     "price": { "regular": 105, "discount": null, "currency": "$" },
     "availability": [
       { "size": "XS", "stock": 3},
@@ -37,7 +39,7 @@
     "isNew": false,
     "isFeatured": false,
     "details": {
-      "brand": "Esprit",
+      "brand": "Orsay",
       "specifications": {
         "material": "cotton",
         "season": "summer",
@@ -50,7 +52,8 @@
   {
     "id": 3,
     "name": "Azure Tailored Pants",
-    "category": "pants",
+    "category": 3,
+    "date": "2024-10-20",
     "price": { "regular": 70, "discount": 20, "currency": "$" },
     "availability": [
       { "size": "S", "stock": 1},
@@ -72,8 +75,9 @@
   {
     "id": 4,
     "name": "Mocha Grace Blouse",
-    "category": "blouse",
-    "price": { "regular": 35, "discount": 5, "currency": "$" },
+    "category": 2,
+    "date": "2025-02-02",
+    "price": { "regular": 35, "discount": null, "currency": "$" },
     "availability": [
       { "size": "M", "stock": 4},
       { "size": "L", "stock": 3},
@@ -95,7 +99,8 @@
   {
     "id": 5,
     "name": "Cocoa Chic Pants",
-    "category": "pants",
+    "category": 3,
+    "date": "2024-12-18",
     "price": { "regular": 65, "discount": 12, "currency": "$" },
     "availability": [
       { "size": "S", "stock": 1},
@@ -119,7 +124,8 @@
   {
     "id": 6,
     "name": "Pure White Summer Dress",
-    "category": "dress",
+    "category": 1,
+    "date": "2025-03-01",
     "price": { "regular": 85, "discount": null, "currency": "$" },
     "availability": [
       { "size": "L", "stock": 7},
@@ -130,7 +136,7 @@
       "description": "A refined piece designed to bring effortless elegance to your wardrobe."
     },
     "details": {
-      "brand": "Orsay",
+      "brand": "Calliope",
       "specifications": {
         "material": "linen",
         "season": "spring/summer",
@@ -143,7 +149,8 @@
   {
     "id": 7,
     "name": "Emerald Soft Blouse",
-    "category": "blouse",
+    "category": 2,
+    "date": "2024-09-25",
     "price": { "regular": 60, "discount": 18, "currency": "$" },
     "availability": [
       { "size": "S", "stock": 5},
@@ -153,7 +160,7 @@
     "isNew": false,
     "isFeatured": false,
     "details": {
-      "brand": "Promod",
+      "brand": "Mango",
       "specifications": {
         "material": "polyester",
         "season": "autumn/winter",
@@ -166,7 +173,8 @@
   {
     "id": 8,
     "name": "Urban Grey Slim Pants",
-    "category": "pants",
+    "category": 3,
+    "date": "2024-08-14",
     "price": { "regular": 70, "discount": 10, "currency": "$" },
     "availability": [
       { "size": "XS", "stock": 2},
@@ -176,7 +184,7 @@
     "isNew": false,
     "isFeatured": false,
     "details": {
-      "brand": "Calliope",
+      "brand": "Orsay",
       "specifications": {
         "material": "cotton",
         "season": "all season",
@@ -189,7 +197,8 @@
   {
     "id": 9,
     "name": "Longline Classic Blouse",
-    "category": "blouse",
+    "category": 2,
+    "date": "2024-07-30",
     "price": { "regular": 55, "discount": null, "currency": "$" },
     "availability": [
       { "size": "M", "stock": 4},
@@ -198,7 +207,7 @@
     "isNew": false,
     "isFeatured": false,
     "details": {
-      "brand": "Mango",
+      "brand": "Sisley",
       "specifications": {
         "material": "linen",
         "season": "spring/summer",
@@ -211,7 +220,8 @@
   {
     "id": 10,
     "name": "Striped Everyday Pants",
-    "category": "pants",
+    "category": 3,
+    "date": "2025-01-05",
     "price": { "regular": 90, "discount": 14, "currency": "$" },
     "availability": [
       { "size": "S", "stock": 6},
@@ -220,7 +230,7 @@
     "isNew": false,
     "isFeatured": false,
     "details": {
-      "brand": "Esprit",
+      "brand": "Mohito",
       "specifications": {
         "material": "tulle",
         "season": "spring",
@@ -233,8 +243,9 @@
   {
     "id": 11,
     "name": "White Muse Dress",
-    "category": "dress",
-    "price": { "regular": 65, "discount": 20, "currency": "$" },
+    "category": 1,
+    "date": "2025-02-18",
+    "price": { "regular": 65, "discount": null, "currency": "$" },
     "availability": [
       { "size": "XS", "stock": 7},
       { "size": "S", "stock": 4},
@@ -243,7 +254,7 @@
     "isNew": true,
     "isFeatured": false,
     "details": {
-      "brand": "Mohito",
+      "brand": "OVS",
       "specifications": {
         "material": "eco leather",
         "season": "autumn/winter",
@@ -256,7 +267,8 @@
   {
     "id": 12,
     "name": "Golden Bloom Dress",
-    "category": "dress",
+    "category": 1,
+    "date": "2024-06-22",
     "price": { "regular": 58, "discount": null, "currency": "$" },
     "availability": [
       { "size": "M", "stock": 3},
@@ -266,7 +278,7 @@
     "isNew": false,
     "isFeatured": false,
     "details": {
-      "brand": "Sisley",
+      "brand": "Calliope",
       "specifications": {
         "material": "satin",
         "season": "all season",

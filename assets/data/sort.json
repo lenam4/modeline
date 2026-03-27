@@ -1,10 +1,26 @@
 [
     {
-        "sortValue": "price-asc",
-        "sortName": "Price low to high"
+        "id": "price-asc",
+        "name": "Price low to high"
     },
     {
-        "sortValue": "price-desc",
-        "sortName": "Price high to low"
+        "id": "price-desc",
+        "name": "Price high to low"
+    },
+    {
+        "id": "name-asc",
+        "name": "Name: A to Z"
+    },
+    {
+        "id": "name-desc",
+        "name": "Name: Z to A"
+    },
+    {
+        "id": "date-asc",
+        "name": "Oldest"
+    },
+    {
+        "id": "date-desc",
+        "name": "Newest"
     }
 ]
