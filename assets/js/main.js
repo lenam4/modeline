@@ -161,26 +161,14 @@ function renderProductCard(shop){
                     <div class="card rounded-0 position-relative image-holder">
                         ${renderBadge(shop)}
                         <img class="card-img rounded-0 img-fluid" src="${shop.image}">
-                        <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                            <ul class="list-unstyled">
-                                <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
-                                <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
-                                <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
-                            </ul>
-                        </div>
+                        
                     </div>
                     <div class="card-body">
                         <a href="shop-single.html" class="h3 text-decoration-none">${shop.name}</a>
                         <p class="text-muted mb-1">${shop.details.brand}</p>
                         <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
                             <li>${renderSize(shop.availability)}</li>
-                            <li class="pt-2">
-                                <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
-                                <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
-                                <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
-                                <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
-                                <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
-                            </li>
+                            
                         </ul>
                         ${renderStock(shop.availability)}
                         <p class="mb-0">${renderPrice(shop.price)}</p>
