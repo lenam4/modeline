@@ -126,9 +126,16 @@ $(document).ready(function(){
 function renderMenu(menuData){
     let data="";
     for(let menu of menuData){
+        if(menu.name=="Documentation"){
+            data+=`<li class="nav-item">
+                        <a class="nav-link" href="${menu.href}" target="_blank">${menu.name}</a>
+                    </li>`
+        }
+        else{
         data+=`<li class="nav-item">
                         <a class="nav-link" href="${menu.href}">${menu.name}</a>
                     </li>`
+        }
     }
     document.querySelector(".data").innerHTML = data;
 }
@@ -176,7 +183,7 @@ function renderProductCard(shop){
                         <a href="shop-single.html" class="h3 text-decoration-none">${shop.name}</a>
                         <p class="text-muted mb-1">${shop.details.brand}</p>
                         <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                            <li>${renderSize(shop.availability)}</li>
+                        <li class="product-size">${renderSize(shop.availability)}</li>
                             
                         </ul>
                         ${renderStock(shop.availability)}
@@ -416,6 +423,7 @@ function addToCart(productId) {
             id: product.id,
             title: product.name,
             price: finalPrice(product),
+            regularPrice: product.price.regular,
             image: product.image,
             category: product.category,
             size: firstAvailableSize,
@@ -466,7 +474,6 @@ function renderCart(){
 
     let subtotalEl = document.getElementById("cart-subtotal");
     let shippingEl = document.getElementById("cart-shipping");
-    let discountEl = document.getElementById("cart-discount");
     let totalEl = document.getElementById("cart-total");
 
     if(!cartItemsContainer){
@@ -543,17 +550,13 @@ function renderCart(){
         shipping = 10;
     }
 
-    let discount = 0;
-    let total = subtotal + shipping - discount;
+    let total = subtotal + shipping;
 
     if(subtotalEl){
         subtotalEl.innerHTML = "$" + subtotal.toFixed(2);
     }
     if(shippingEl){
         shippingEl.innerHTML = "$" + shipping.toFixed(2);
-    }
-    if(discountEl){
-        discountEl.innerHTML = "$" + discount.toFixed(2);
     }
     if(totalEl){
         totalEl.innerHTML = "$" + total.toFixed(2);
@@ -578,4 +581,162 @@ function showToast(){
     setTimeout(function(){
         toast.classList.remove("show");
     }, 2000);
+}
+
+function renderCheckoutSummary() {
+    const cart = getCart();
+
+    const itemsContainer = document.getElementById("checkout-items");
+    const subtotalEl = document.getElementById("checkout-subtotal");
+    const shippingEl = document.getElementById("checkout-shipping");
+    const totalEl = document.getElementById("checkout-total");
+
+    if (!itemsContainer) return;
+
+    if (cart.length === 0) {
+        itemsContainer.innerHTML = `<p class="mb-0 text-muted">Your cart is empty.</p>`;
+        if (subtotalEl) subtotalEl.textContent = "$0.00";
+        if (shippingEl) shippingEl.textContent = "$0.00";
+        if (totalEl) totalEl.textContent = "$0.00";
+        return;
+    }
+
+    let html = "";
+    let subtotal = 0;
+    let shipping = 10;
+
+    for (let item of cart) {
+        let itemTotal = item.price * item.quantity;
+        subtotal += itemTotal;
+
+        html += `
+            <div class="summary-product">
+                <div>
+                    <p class="summary-product-name">${item.title}</p>
+                    <p class="summary-product-meta">Qty: ${item.quantity} | Size: ${item.size}</p>
+                </div>
+                <div>$${itemTotal.toFixed(2)}</div>
+            </div>
+        `;
+    }
+
+    itemsContainer.innerHTML = html;
+
+    if (subtotalEl) subtotalEl.textContent = "$" + subtotal.toFixed(2);
+    if (shippingEl) shippingEl.textContent = "$" + shipping.toFixed(2);
+    if (totalEl) totalEl.textContent = "$" + (subtotal + shipping).toFixed(2);
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    renderCheckoutSummary();
+});
+
+// CHECKOUT FORMA 
+
+const checkoutForm = document.getElementById("checkout-form");
+
+if(checkoutForm){
+
+    const fullName = document.getElementById("fullName");
+    const phone = document.getElementById("phone");
+    const email = document.getElementById("email");
+    const address = document.getElementById("address");
+    const payment = document.getElementById("payment");
+    const terms = document.getElementById("terms");
+
+    const errorFullName = document.getElementById("errorFullName");
+    const errorPhone = document.getElementById("errorPhone");
+    const errorEmail = document.getElementById("errorEmail");
+    const errorAddress = document.getElementById("errorAddress");
+    const errorPayment = document.getElementById("errorPayment");
+    const errorTerms = document.getElementById("errorTerms");
+
+    checkoutForm.addEventListener("submit", function(e){
+        e.preventDefault();
+
+        try{
+
+            let valid = true;
+
+            const nameRegex = /^[A-ZŠĐŽČĆ][a-zšđžčć]{2,15}( [A-ZŠĐŽČĆ][a-zšđžčć]{2,15})+$/;
+            const phoneRegex = /^[0-9+\s\/-]{6,20}$/;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const addressRegex = /^[A-Za-z0-9]{3,20}$/;
+
+            // FULL NAME
+            if(!nameRegex.test(fullName.value.trim())){
+                errorFullName.textContent = "Name must contain name and surname";
+                valid = false;
+            }
+            else{
+                errorFullName.textContent = "";
+            }
+
+            // PHONE
+            if(!phoneRegex.test(phone.value.trim())){
+                errorPhone.textContent = "Invalid phone number";
+                valid = false;
+            }
+            else{
+                errorPhone.textContent = "";
+            }
+
+            // EMAIL
+            if(!emailRegex.test(email.value.trim())){
+                errorEmail.textContent = "Invalid email";
+                valid = false;
+            }
+            else{
+                errorEmail.textContent = "";
+            }
+
+            // ADDRESS
+            if(!addressRegex.test(address.value.trim())){
+                errorAddress.textContent = "Address is too short";
+                valid = false;
+            }
+            else{
+                errorAddress.textContent = "";
+            }
+
+            // PAYMENT
+            if(payment.value === "0"){
+                errorPayment.textContent = "Select payment method";
+                valid = false;
+            }
+            else{
+                errorPayment.textContent = "";
+            }
+
+            // TERMS
+            if(!terms.checked){
+                errorTerms.textContent = "You must confirm data";
+                valid = false;
+            }
+            else{
+                errorTerms.textContent = "";
+            }
+
+            // SUCCESS
+            const toast = document.getElementById("checkout-toast");
+
+            if(valid){
+                toast.classList.add("show");
+
+                setTimeout(() => {
+                toast.classList.remove("show");
+                }, 2500);
+
+                checkoutForm.reset();
+                localStorage.removeItem(CART_KEY);
+                renderCart();
+                updateCartCount();
+            }
+
+        }
+        catch(error){
+            console.log(error);
+        }
+
+    });
 }

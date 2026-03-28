@@ -43,7 +43,7 @@
                 <div class="d-flex align-items-center">
                     <a class="nav-icon position-relative text-decoration-none text-dark" href="cart.html">
                         <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-                        <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success text-white">0</span>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success text-white">0</span>
                     </a>
                 </div>
             </div>
@@ -52,109 +52,119 @@
     </nav>
 
 
-    <!-- Hero Section -->
-    <section class="bg-light py-5">
+<!-- CONTACT SECTION -->
+<section class="bg-light py-5">
         <div class="container">
-            <div class="row align-items-center py-5">
-                <div class="col-md-6 text-center text-md-start">
-                    <h1 class="h1 mb-3"><b class="text-success">Modeline</b> — Effortless Style, Everyday Elegance</h1>
-                    <h2 class="h4 mb-3">Discover carefully curated pieces designed to elevate your look.</h2>
-                    <p>
-                        Explore a collection where modern design meets timeless simplicity.
-                        From statement outfits to subtle details, each piece is selected to help
-                        you express your personal style with confidence.
+            <div class="row align-items-center py-4">
+                <div class="col text-center">
+                    <h1 class="h1 mb-3">Checkout</h1>
+                    <p class="mb-0">
+                        Complete your order with your basic details.
                     </p>
-                    <a href="shop.html" class="btn btn-success mt-3">Explore Collection</a>
-                </div>
-                <div class="col-md-6 text-center hero-img-wrapper">
-                    <img src="assets/img/hero-modeline.png" class="img-fluid hero-img" alt="">
                 </div>
             </div>
         </div>
     </section>
 
-
-    <!-- Featured Categories -->
     <section class="container py-5">
-        <div class="row text-center pt-3">
-            <div class="col-lg-6 m-auto">
-                <h2 class="h1">Featured Categories</h2>
-                <p>
-                    Explore our selection of pieces designed to complement every style and occasion.
-                </p>
-            </div>
-        </div>
-
-        <div class="row" id="category">
+        <div class="row g-4">
             
+            <!-- Left side -->
+            <div class="col-lg-8">
+                <div class="checkout-box p-4">
+                    <h2 class="h2 mb-4">Contact Information</h2>
+
+                    <form id="checkout-form">
+                        <div class="row">
+
+                            <div class="col-md-6 mb-3">
+                                <label for="fullName" class="checkout-label">Full Name</label>
+                                <input type="text" id="fullName" class="checkout-input" placeholder="Enter your full name">
+                                <small id="errorFullName" class="checkout-error"></small>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="phone" class="checkout-label">Phone Number</label>
+                                <input type="text" id="phone" class="checkout-input" placeholder="Enter your phone number">
+                                <small id="errorPhone" class="checkout-error"></small>
+                            </div>
+
+                            <div class="col-12 mb-3">
+                                <label for="email" class="checkout-label">Email Address</label>
+                                <input type="text" id="email" class="checkout-input" placeholder="Enter your email address">
+                                <small id="errorEmail" class="checkout-error"></small>
+                            </div>
+
+                            <div class="col-12 mb-3">
+                                <label for="address" class="checkout-label">Address</label>
+                                <input type="text" id="address" class="checkout-input" placeholder="Street and number">
+                                <small id="errorAddress" class="checkout-error"></small>
+                            </div>
+
+                            <div class="col-12 mb-3">
+                                <label for="payment" class="checkout-label">Payment Method</label>
+                                <select id="payment" class="checkout-input checkout-select">
+                                    <option value="0">Choose payment method</option>
+                                    <option value="cash-on-delivery">Cash on delivery</option>
+                                    <option value="card-on-delivery">Card on delivery</option>
+                                </select>
+                                <small id="errorPayment" class="checkout-error"></small>
+                            </div>
+
+                            <div class="col-12 mb-3">
+                                <label class="checkout-check">
+                                    <input type="checkbox" id="terms">
+                                    <span>I confirm that the entered information is correct.</span>
+                                </label>
+                                <small id="errorTerms" class="checkout-error"></small>
+                            </div>
+
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-success px-4">Place Order</button>
+                            </div>
+
+                        </div>
+                    </form>
+                    <div id="checkout-toast" class="cart-toast">
+                    Order placed successfully!
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right side -->
+            <div class="col-lg-4">
+                <div class="checkout-summary p-4">
+                    <h2 class="h2 mb-4">Order Summary</h2>
+
+                    <div id="checkout-items">
+                        <!-- ovde ide ispis proizvoda iz JS -->
+                    </div>
+
+                    <div class="d-flex justify-content-between mb-3 mt-3">
+                        <span>Subtotal</span>
+                        <span id="checkout-subtotal">$0.00</span>
+                    </div>
+
+                    <div class="d-flex justify-content-between mb-3">
+                        <span>Shipping</span>
+                        <span id="checkout-shipping">$10.00</span>
+                    </div>
+
+                    <hr>
+
+                    <div class="d-flex justify-content-between mb-0">
+                        <strong>Total</strong>
+                        <strong id="checkout-total" class="text-success">$0.00</strong>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
 
-    <!-- Featured Pieces -->
-    <section class="bg-light py-5">
-        <div class="container">
-            <div class="row text-center py-3">
-                <div class="col-lg-6 m-auto">
-                    <h2 class="h1">Featured Pieces</h2>
-                    <p>
-                        Discover selected items that stand out for their design, quality, and versatility.
-                    </p>
-                </div>
-            </div>
-
-            <div class="row" id="featuredProducts">
-                <!-- <div class="col-12 col-md-4 mb-4">
-                    <div class="card h-100">
-                        <a href="shop-single.html">
-                            <img src="assets/img/cutewhitedress.jpg" class="card-img-top" alt="Elegant dress">
-                        </a>
-                        <div class="card-body text-center">
-                            <a href="shop-single.html" class="h4 text-decoration-none text-dark d-block mb-2">Elegant Dress</a>
-                            <p class="card-text">
-                                A refined piece designed to bring effortless elegance to your wardrobe.
-                            </p>
-                            <p class="text-success fw-bold">$89.00</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-4 mb-4">
-                    <div class="card h-100">
-                        <a href="shop-single.html">
-                            <img src="assets/img/beigeblouse.jpg" class="card-img-top" alt="Modern bag">
-                        </a>
-                        <div class="card-body text-center">
-                            <a href="shop-single.html" class="h4 text-decoration-none text-dark d-block mb-2">Modern Bag</a>
-                            <p class="card-text">
-                                A clean and versatile accessory made for everyday styling.
-                            </p>
-                            <p class="text-success fw-bold">$65.00</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-4 mb-4">
-                    <div class="card h-100">
-                        <a href="shop-single.html">
-                            <img src="assets/img/brownpants.jpg" class="card-img-top" alt="Minimal set">
-                        </a>
-                        <div class="card-body text-center">
-                            <a href="shop-single.html" class="h4 text-decoration-none text-dark d-block mb-2">Minimal Set</a>
-                            <p class="card-text">
-                                A contemporary outfit combining comfort and modern aesthetics.
-                            </p>
-                            <p class="text-success fw-bold">$110.00</p>
-                        </div>
-                    </div>
-                </div> -->
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Footer -->
-    <footer class="bg-dark" id="templatemo_footer">
+<!-- FOOTER -->
+<footer class="bg-dark" id="templatemo_footer">
     <div class="container">
         <div class="row">
 
@@ -215,6 +225,7 @@
                 </ul>
             </div>
 
+
         </div>
     </div>
 
@@ -231,9 +242,5 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="assets/js/main.js"></script>
-
-    <div id="cart-toast" class="cart-toast">
-    Product added to cart ✓
-    </div>
 </body>
 </html>
